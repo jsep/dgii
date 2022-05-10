@@ -42,7 +42,7 @@ export class Contribuyentes {
   }
 
   private getFilePath() {
-    return path.join(PROJECT_ROOT, 'rnc', 'DGII_CONTRIBUYENTES.TXT');
+    return path.join(PROJECT_ROOT, 'contribuyentes', 'DGII_CONTRIBUYENTES.TXT');
   }
 
   async loadFile(file: string): Promise<string> {
