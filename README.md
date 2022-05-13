@@ -1,5 +1,7 @@
 # dgii
-Public API for DGII
+Public API for DGII 
+ 
+[![Tests](https://github.com/jsep/dgii/actions/workflows/main.yml/badge.svg)](https://github.com/jsep/dgii/actions/workflows/main.yml)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
