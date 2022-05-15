@@ -36,13 +36,16 @@ export class Contribuyentes {
   private async parseData() {
     let filePath = this.getFilePath();
     const file = await this.loadFile(filePath);
+    // console.log('file', typeof file);
+    return JSON.parse(file);
     return file.split('\n').map((line) => {
       return this.parseLine(line);
     });
   }
 
   private getFilePath() {
-    return path.join(PROJECT_ROOT, 'contribuyentes', 'DGII_CONTRIBUYENTES.TXT');
+    // return path.join(PROJECT_ROOT, 'contribuyentes', 'DGII_CONTRIBUYENTES.TXT');
+    return path.join(PROJECT_ROOT, 'json', 'data.json');
   }
 
   async loadFile(file: string): Promise<string> {
