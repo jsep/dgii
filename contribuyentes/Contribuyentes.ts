@@ -45,7 +45,7 @@ export class Contribuyentes {
 
   private getFilePath() {
     // return path.join(PROJECT_ROOT, 'contribuyentes', 'DGII_CONTRIBUYENTES.TXT');
-    return path.join(PROJECT_ROOT, 'json', 'data.json');
+    return path.join(PROJECT_ROOT, 'data', 'data.json');
   }
 
   async loadFile(file: string): Promise<string> {
