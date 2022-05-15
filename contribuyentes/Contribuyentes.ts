@@ -45,7 +45,7 @@ export class Contribuyentes {
 
   private getFilePath() {
     // return path.join(PROJECT_ROOT, 'contribuyentes', 'DGII_CONTRIBUYENTES.TXT');
-    return path.join(PROJECT_ROOT, 'data', 'data.json');
+    return path.join(PROJECT_ROOT, 'public', 'data.json');
   }
 
   async loadFile(file: string): Promise<string> {
@@ -69,6 +69,21 @@ export class Contribuyentes {
       nombreComercial,
       extra: rest.join('|'),
     };
+  }
+
+  async add() {
+    const filePath = this.getFilePath();
+    const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+    console.log(data);
+    data.push({
+      rnc: '123456789',
+      nombre: 'nombre',
+      razonSocial: 'razon social',
+      nombreComercial: 'nombre comercial',
+      extra: 'extra',
+    });
+    fs.writeFileSync(filePath, JSON.stringify(data), 'utf8');
+    return data;
   }
 }
 
