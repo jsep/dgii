@@ -9,11 +9,11 @@ jobs:
  custom-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: akhileshns/heroku-deploy@v3.12.12
       - name: Check out repository
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
+      - uses: akhileshns/heroku-deploy@v3.12.12
       - name: Heroku login credentials
         run: |
           cat > ~/.netrc <<EOF
