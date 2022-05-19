@@ -15,3 +15,5 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "dgii" #Must be unique in Heroku
           heroku_email: ${{secrets.HEROKU_EMAIL}}
+          justlogin: true
+      - run: heroku auth:whoami
